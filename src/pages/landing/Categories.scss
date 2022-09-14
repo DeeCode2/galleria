@@ -1,0 +1,73 @@
+@use '../../App.scss';
+
+/*entire section*/
+#cats {
+    max-width: 1200px;
+    margin: auto;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+        /*individual categories*/
+        .category {
+        margin-bottom: 5%;
+        margin-top: 5%;
+        width: 100%;
+        height: min-content;
+        @include App.text-style;
+        
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+            /*category image*/
+            .cat__img {
+            aspect-ratio: 1/1;
+            width: 100%;
+            
+            background-image: url("../../../public/main-gallery/hokusai-wave.jpg");
+            background-size: cover;
+            }
+
+            /*category text*/
+            .cat__body {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding-left: 3%;
+
+                h3 {
+                    font-size: 3em;
+                    width: max-content;
+                }
+
+                p {
+                    font-size: 1.5rem;
+                    letter-spacing: 7%;
+                    line-height: 145%;            
+                }
+
+                a {
+                    border: solid;
+                    width: fit-content;
+                }
+            }
+        }
+
+}
+
+/*reverse the middle category*/
+#two {
+    transform: rotateY(180deg);
+
+    .cat__body {
+        transform: rotateY(180deg);
+    }
+}
+
+hr {
+    border-top: App.$trim;
+    width: 80%;
+    margin: auto;
+}

@@ -1,0 +1,64 @@
+@use '../../App.scss';
+
+/*Define variables*/
+$shadow: drop-shadow(.5rem .5rem 1.5rem black);
+
+@mixin bg {
+  /*bg size*/
+  @include App.full-size;
+  position: absolute;
+
+  /*bg img + rotation*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transform: rotate(180deg);
+  
+  /*box shadow*/
+  filter: $shadow;
+}
+
+/*styling header*/
+#header {
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5) url("../../../public/headers/floral-bg.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    border-bottom: App.$trim;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+/*artemisia*/
+    img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        max-width: 50vw;
+        z-index: 3;
+      }
+//lefy borders
+    #header__border {
+      @include bg;
+      background-image: url("../../../public/headers/plant-border.png");
+    }
+    
+    #header__outer-border {
+      @include bg; 
+      background-image: url("../../../public/headers/outer-plant-border.png");
+      z-index: 4;
+    }
+
+
+
+  h1 {
+    font-size: 20vmax;
+    font-family: App.$header-font; 
+    text-align: center;
+    color: white;
+    height: auto;
+  }
+}
