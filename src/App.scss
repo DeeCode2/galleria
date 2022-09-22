@@ -21,7 +21,7 @@ $regular-font: 'Inconsolata', monospace;
   padding: .5em;
   font-weight: bold;
   font-size: 1.5vw;
-  color: App.$white;
+  color: $white;
   transition: 0.3s;
 
   @media (max-width: 800px) {
