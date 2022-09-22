@@ -41,21 +41,21 @@
 
     a {color: App.$white;}
 
-    a:hover, a:active {
-      background-color: App.$white !important;
-      color: App.$green;
-      transition: 0.3s;
-    }
+    // a:hover, a:active {
+    //   background-color: App.$white !important;
+    //   color: App.$green;
+    //   transition: 0.3s;
+    // }
 
-    a:visited:hover {
-      background-color: App.$white !important;
-      color: App.$green;
-      transition: 0.3s;
-    }
-    
     a.card-link {
-      @include App.link-styles;
-    }
+          @include App.link-styles;
+        }
+
+    a.card-link:hover, a.card-link:active, a.card-link:visited:hover {
+        background-color: App.$white !important;
+        color: App.$green;
+        transition: 0.3s;
+      }
   }
   
   .portrait {
