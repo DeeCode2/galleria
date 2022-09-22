@@ -41,7 +41,7 @@
 
     a {color: App.$white;}
 
-    a:hover, a:active {
+    a:hover, a:active, a:visited:hover {
       background-color: App.$white !important;
       color: App.$green;
       transition: 0.3s;
