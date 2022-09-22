@@ -68,6 +68,10 @@
     .card__detail {
       @include text;
     }
+
+    a {
+      @include App.link-styles
+    }
   }
 
   #about {

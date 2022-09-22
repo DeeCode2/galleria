@@ -1,22 +1,16 @@
 @use '../../App.scss';
 
-
-
 #gallery {
-  color: App.$white;
-  font-family: App.$regular-font;
-  width: 100%;
-  padding: 5%;
-
-
-
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2.5em;
+  width: 100%;
+  padding: 5%;
+  color: App.$white;
+  font-family: App.$regular-font;
 
   @media (max-width: 600px) {
     grid-template-columns: 1fr;
-    
   }
 
 }
@@ -27,12 +21,6 @@
   filter: drop-shadow(0 0 4px black);
   display: flex;
   justify-content: space-between;
-  //margin-bottom: 5vw;
-  //height: 100vh;
-
-  //border-radius: 20px;
-
-  
 
   .card__info {
     width: 100%;
@@ -53,28 +41,14 @@
 
     a {color: App.$white;}
 
-    a:hover, a:active, a:visited:hover {
-      background-color: App.$white;
+    a:hover, a:active {
+      background-color: App.$white !important;
       color: App.$green;
       transition: 0.3s;
     }
     
     a.card-link {
-      width: 50%;
-      margin-top: auto;
-      text-align: center;
-      text-decoration: none;
-      border: App.$trim;
-      padding: .5em;
-      font-weight: bold;
-      font-size: 1.5vw;
-      color: App.$white;
-      transition: 0.3s;
-
-      @media (max-width: 800px) {
-        width: 100%;
-        font-size: 20px;
-      }
+      @include App.link-styles;
     }
   }
   
