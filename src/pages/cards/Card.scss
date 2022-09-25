@@ -70,7 +70,8 @@
     }
 
     a {
-      @include App.link-styles
+      @include App.link-styles;
+      margin-top: 3em;
     }
   }
 
