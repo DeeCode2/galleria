@@ -24,7 +24,7 @@ function Card() {
                     <span  className="card__info">{data.artist}, {data.date}<br />{data.location}</span>
                     <p  className="card__desc">{data.description}</p>
 
-                    <a className="external-link" href={data.metlink}>Read More</a>
+                    <a className="external-link" href={data.metlink} target="_blank">Read More</a>
                 </section>
             </section>
                 
