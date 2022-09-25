@@ -67,6 +67,10 @@
 
     .card__detail {
       @include text;
+
+      .card__desc {
+        margin-bottom: 2em;
+      }
     }
 
     a {
